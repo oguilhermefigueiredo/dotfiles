@@ -1,0 +1,6 @@
+#!/bin/sh
+stop() {
+docker ps -q | xargs docker stop &
+} 
+
+stop
