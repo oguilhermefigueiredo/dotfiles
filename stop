@@ -1,4 +1,5 @@
 #!/bin/sh
+#Stop your Docker container automatically
 stop() {
 docker ps -q | xargs docker stop &
 } 
