@@ -1,4 +1,5 @@
 #!/bin/sh
+# Start and attach to your container putting the name/id as the argument
 docker start "$1" 
 docker attach "$1"
 
