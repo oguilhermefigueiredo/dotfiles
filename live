@@ -1,0 +1,10 @@
+#!/bin/sh
+if [ "$#" = 0 ]; then
+  exec live-server > /dev/null 2>&1 &
+	echo 'Server is running...'
+elif [ "$1" = "stop" ]; then
+  for process in $(pgrep node); do
+ 	  kill "$process"
+		echo 'Server was stopped.'
+ 	done
+fi
