@@ -1,5 +1,5 @@
 #!/bin/sh
 # Quick searches on DuckDuckGo through command-line
-url="https://lite.duckduckgo.com/lite?kd=-1&kp=-1&q=$(urlencode "$*")" # 🦆
+url="https://lite.duckduckgo.com/lite?kd=-1&kp=-1&q=$(urlencode "$*")"
 exec w3m "$url"
 #exec lynx "duckduckgo.com/lite?q=$*"
