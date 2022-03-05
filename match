@@ -1,0 +1,8 @@
+#!/bin/bash
+
+while IFS= read -r line; do
+  if [[ "$line" =~ $1 ]]; then
+    echo "$line"
+    # echo "MATCH: ${BASH_REMATCH[0]}"
+  fi
+done
