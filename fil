@@ -1,0 +1,26 @@
+#!/bin/sh
+#######################################
+# Filter script to quickly comment lines 
+# Arguments:
+#   If any argument was passed, it will
+#   use hashtags(#), but you can specify
+#   the character you want to use in the
+#   first argument.
+#######################################
+
+while IFS= read -r line; do
+  case "$1" in
+    -qq|--double-quotes)
+      echo "\"\"" "$line"
+    ;;
+    -q|--quotes)
+      echo "\"" "$line"
+    ;;
+    -s|--slash)
+      echo "//" "$line"
+    ;;
+    *)
+      echo "${1-#}" "$line"
+  esac
+done
+

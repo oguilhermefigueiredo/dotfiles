@@ -1,0 +1,25 @@
+#!/bin/sh
+#######################################
+# Unfilter script to quickly uncomment lines 
+# Arguments:
+#   If any argument was passed, it will
+#   use hashtags(#), but you can specify
+#   the character you want to use in the
+#   first argument.
+#######################################
+while IFS= read -r line; do
+  case "$1" in
+    -qq|--double-quotes)
+      echo "$line" | sed "s/\"\" //"    
+    ;;
+    -q|--quotes)
+      echo "$line" | sed "s/\" //"
+    ;;
+    -s|--slash)
+      echo "$line" | sed "s/\/\/ //"
+    ;;
+    *)
+      echo "$line" | sed "s/${1-#} //"
+  esac
+done
+
