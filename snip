@@ -1,0 +1,13 @@
+#!/bin/sh
+
+[ -z "$SNIPS" ] && echo "SNIPPETS directory unknown..." && exit 1
+
+snip() {
+  _snip_name="$1"
+  _snip_path="$SNIPS/$_snip_name"
+  if [ -e "$_snip_path" ]; then
+    printf "" | cat "$_snip_path" 
+  fi
+}
+
+snip "$@"
