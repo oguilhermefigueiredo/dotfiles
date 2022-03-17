@@ -1,0 +1,2 @@
+# Fix and refresh your .bashrc config
+alias fixalias="hash -r; unalias -a; source ~/.bashrc; exec bash -l"

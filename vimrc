@@ -63,7 +63,6 @@ call plug#begin('~/.vim/plugged')
   Plug 'dense-analysis/ale'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
   Plug 'pangloss/vim-javascript'
-  Plug 'mxw/vim-jsx'
 call plug#end()
 
 " Vundle
@@ -73,3 +72,4 @@ call vundle#begin()
   Plugin 'VundleVim/Vundle.vim'
   Plugin 'jiangmiao/auto-pairs'
 call vundle#end()            
+

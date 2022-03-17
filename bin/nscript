@@ -1,0 +1,5 @@
+#!/bin/sh
+
+name=$1
+path="$(pwd)"
+touch "$name" && chmod u+x "$name" && echo "#!/bin/sh" > "$path/$name"

@@ -1,0 +1,5 @@
+#!/bin/sh
+# Split a string into a list for "CMD" commands in Dockerfiles
+
+cmd="\"$1\".split()"
+echo "print('CMD', $cmd)" | python

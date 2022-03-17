@@ -1,0 +1,23 @@
+#!/bin/sh
+
+n=$1
+a=0
+b=1
+c=0
+i=1
+
+echo 'Fibonacci sequence:'
+
+while [ "$i" -le "$n" ]; do
+  c=$((a + b))
+  a=$b
+  b=$c
+   
+  echo $c
+  sleep .1;
+  i=$((i+1))
+done
+
+printf "\nFormula: F(n) = F(n)-1 + F(n)-2\n"
+echo "F($n) = $c"
+

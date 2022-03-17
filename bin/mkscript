@@ -1,0 +1,2 @@
+#!/bin/sh
+exec sudo mv "$(pwd)/$1" "/usr/local/bin/"
