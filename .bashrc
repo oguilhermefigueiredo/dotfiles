@@ -22,7 +22,10 @@ _source_if() { [[ -r "$1" ]] && source "$1"; }
 
 export USER="${USER:-$(whoami)}"
 export GITUSER="$USER"
+<<<<<<< HEAD
 export PATH=/home/gfigueiredo/Swift/usr/bin:"${PATH}"
+=======
+>>>>>>> d6965e1e325fc07d2d2b6ba027457536313f4e79
 export REPOS="$HOME/Repos"
 export GHREPOS="$REPOS/github.com/$GITUSER"
 export DOTFILES="$GHREPOS/dot"
@@ -149,6 +152,7 @@ __ps1() {
   short="$u\u$g$PROMPT_AT$h\h$g:$w$dir$B$p$P$x "
   long="$g╔ $u\u$g$PROMPT_AT$h\h$g:$w$dir$B\n$g╚ $p$P$x "
   double="$g╔ $u\u$g$PROMPT_AT$h\h$g:$w$dir\n$g║ $B\n$g╚ $p$P$x "
+<<<<<<< HEAD
 
   if (( ${#countme} > PROMPT_MAX )); then
     PS1="$mine"
@@ -163,6 +167,22 @@ PROMPT_COMMAND="__ps1"
 
 # ----------------------------- keyboard -----------------------------
 
+=======
+
+  if (( ${#countme} > PROMPT_MAX )); then
+    PS1="$mine"
+  elif (( ${#countme} > PROMPT_LONG )); then
+    PS1="$mine"
+  else
+    PS1="$mine"
+  fi
+}
+
+PROMPT_COMMAND="__ps1"
+
+# ----------------------------- keyboard -----------------------------
+
+>>>>>>> d6965e1e325fc07d2d2b6ba027457536313f4e79
 _have setxkbmap && test -n "$DISPLAY" && \
   setxkbmap -option caps:escape &>/dev/null
 
@@ -203,6 +223,7 @@ _have mk && complete -o default -F __start_minikube mk
 _have podman && _source_if "$HOME/.local/share/podman/completion" # d
 _have docker && _source_if "$HOME/.local/share/docker/completion" # d
 _have docker-compose && complete -F _docker_compose dc # dc
+<<<<<<< HEAD
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
@@ -219,3 +240,5 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+=======
+>>>>>>> d6965e1e325fc07d2d2b6ba027457536313f4e79

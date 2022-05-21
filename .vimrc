@@ -347,9 +347,17 @@ endif
 " start at last place you were editing
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 "au BufWritePost ~/.vimrc so ~/.vimrc
+<<<<<<< HEAD
 
 " read personal/private vim configuration (keep last to override)
 set rtp^=~/.vimpersonal
 set rtp^=~/.vimprivate
 set rtp^=~/.vimwork
 
+=======
+
+" read personal/private vim configuration (keep last to override)
+set rtp^=~/.vimpersonal
+set rtp^=~/.vimprivate
+set rtp^=~/.vimwork
+>>>>>>> d6965e1e325fc07d2d2b6ba027457536313f4e79
